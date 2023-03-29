@@ -8,6 +8,10 @@ body{
   background-color: rgb(236, 209, 173);
 }
 
+.btn {
+  padding: 20px;
+}
+
 .my_container{
   display: flex;
   flex-wrap: wrap;
