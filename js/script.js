@@ -4,9 +4,17 @@ console.log('ciao capominato')
 // 2. bottone trigger
 
 // __ sistema d aggiunta
+const container = document.getElementById('my_container')
 
-let boxOut = '  <div id="box" class="box">box</div>';
+console.log(container);
+// ciclo d aggiunta
+for (let i = 1; i < 101; i++) {
+  idBox = `<div id="${i}" class="box">${i}</div>`
+  container.innerHTML += idBox;
+  // console.log(idBox)
+}
 
-document.getElementById('my_container').innerHTML = boxOut;
 
-console.log(my_container);
+function boxGeneretor(nBox){
+
+}
