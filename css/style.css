@@ -1,0 +1,27 @@
+*{
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+body{
+  font-family: monospace;
+}
+
+.my_container{
+  display: flex;
+  flex-wrap: wrap;
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  margin: 10px auto;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: calc(100% / 10);
+  height: calc(100% / 10); 
+  border: 1px solid rgb(131, 128, 128);
+
+}
