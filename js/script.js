@@ -15,16 +15,18 @@ function generatoreBoxs(container) {
         container.innerHTML ='';
   // ciclo d aggiunta dei div al container
     for (let i = 1; i < boxNumber + 1; i++) {  
-    idBox = `<div id="${i}" class="box">${i}</div>`
-    container.innerHTML += idBox;
+    // idBox = `<div id="${i}" class="box">${i}</div>`
+    container.append(singleBox(i));
   }
   console.log('generatore box and!')
   }
 
-function singleBox() {
+function singleBox(id) {
   box = document.createElement('div');
   box.className = 'box';
-  
+  box.id = id;
+  box.innerHTML = id;
+  box.addEventListener('click', function(){console.log('box',id,'clicked')})
   return box;
 }
 
