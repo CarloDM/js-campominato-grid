@@ -32,6 +32,6 @@ body{
 
 }
 
-.box:hover{
+.box.active{
   background-color: rgb(189, 214, 231);
 }
