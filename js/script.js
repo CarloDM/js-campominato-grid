@@ -1,25 +1,33 @@
 // ELEMENTI GLOBALI
+const difficolta = document.getElementById('level').value;
+const btnStart = document.getElementById('btnOne');
+const container = document.getElementById('my_container');
+container.append(singleBox())
 let boxNumber = 100;
-let btn = document.getElementById('btnOne')
 
 // 2. bottone trigger
-btn.addEventListener("click", function(){generatoreBoxs()});
+btnStart.addEventListener("click", function(){generatoreBoxs(container)});
 
-function generatoreBoxs() {
+function generatoreBoxs(container) {
   console.log('generatore box start!')
-  
     // 1. prendere container
-  const container = document.getElementById('my_container')
-    // reset
+    //    svuota container
         container.innerHTML ='';
   // ciclo d aggiunta dei div al container
     for (let i = 1; i < boxNumber + 1; i++) {  
     idBox = `<div id="${i}" class="box">${i}</div>`
     container.innerHTML += idBox;
   }
-
   console.log('generatore box and!')
   }
+
+function singleBox() {
+  box = document.createElement('div');
+  box.className = 'box';
+  
+  return box;
+}
+
 
 
 // devo sentire il click in se eseguito sopra ogni div 
