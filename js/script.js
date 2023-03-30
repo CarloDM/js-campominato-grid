@@ -5,12 +5,18 @@ const container = document.getElementById('my_container');
 container.append(singleBox())
 let boxNumber = 100;
 
-// 2. bottone trigger
+//  bottone start
 btnStart.addEventListener("click", function(){generatoreBoxs(container)});
 
+
+
+
+
+
+
+// -------------- boxs generator-------------
 function generatoreBoxs(container) {
   console.log('generatore box start!')
-    // 1. prendere container
     //    svuota container
         container.innerHTML ='';
   // ciclo d aggiunta dei div al container
@@ -20,21 +26,27 @@ function generatoreBoxs(container) {
   console.log('generatore box and!')
   }
 
+// ---------- single box generator------------
 function singleBox(id) {
   box = document.createElement('div');
   box.className = 'box';
   box.id = id;
   box.innerHTML = id;
-  box.addEventListener('click', function(){console.log('box',id,'clicked'),this.classList.add('active') })
+  box.addEventListener('click', function(){clickBox(id,this); })
   return box;
+}
+
+// ---------- box click------------
+function clickBox(id,ths) {
+  console.log('box',id,'clicked')
+  ths.classList.add('active')
 }
 
 
 
-// devo sentire il click in se eseguito sopra ogni div 
-// prendo i div e mi metto ad ascoltarli
-// const boxs = document.getElementsByClassName("box");
-// console.log(boxs.length)
+
+
+
 
 
       // boxs.addEventListener("click", handleClickBox);
@@ -55,7 +67,3 @@ function singleBox(id) {
 - congelo la griglia e l opacizzo
 
 */
-
-// function handleClickBox (){
-//   console.log(this.value)
-// }
